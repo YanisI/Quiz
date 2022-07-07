@@ -1,0 +1,123 @@
+.quiz {
+    width: 100vw;
+    height: 100vh;
+    background-color: steelblue;
+    display: flow-root;
+
+    .container {
+
+        height: 400px;
+        width: 600px;
+        padding: 10px;
+        margin:  150px auto;
+        background-color: #213fc5;
+        border-radius: 25px;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: azure;
+
+        .questionMark {
+            padding: 20px 10px;
+            flex: 0 0 30%;
+            width: 50%;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .question {
+            padding: 20px 10px;
+            flex: 0 0 65%;
+            width: 50%;
+            font-size: 18px;
+        }
+        .reponses {
+            padding: 20px 10px;
+            flex: 0 0 80%;
+            width: 50%;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                display: none;
+              }
+            
+            .reponse {
+                text-align: center;
+                color: white;
+                border: 2px solid white;
+                transition: 0.5s;
+                margin: 10px 5px;
+                padding: 10px 5px;
+                border-radius: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #2c3768;
+                }
+            }
+            .active {
+                background-color: #2c3768;
+                border: 2px solid grey;
+            }
+        }
+
+        .valider {       
+            flex: 0 0 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                border: white 2px solid;
+                background-color: transparent;
+                outline: none;
+                width: 70px;
+                height: 40px;
+                border-radius: 15px;
+                color: white;
+                transition: 0.5s;
+
+                &:hover {
+                    color: black;
+                background-color: white;
+                border: black 2px solid;
+                }
+            }
+        }
+
+        
+    }
+
+    .scoreContainer {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .showScore {
+            font-size: 28px;
+            margin: 20px 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            margin: 20px 20px;
+        }
+        .replay {
+            background-color: #101a44;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                color: #101a44;
+            background-color: white;
+            }
+        }
+
+    }
+}
